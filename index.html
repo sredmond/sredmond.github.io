@@ -1,1 +1,69 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Sam Redmond</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="A landing page for Sam Redmond">
+	<meta name="author" content="Sam Redmond">
+
+	<!-- Custom Styles -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<link href="/static/css/main.css" rel="stylesheet">
+
+	<!-- Touch and fav icons -->
+	<link rel="icon" href="/static/img/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+	<div id="wrap">
+		<div class="navbar navbar-default" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href={{ url_for('index') }}>AP Physics C</a>
+				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="/">Home</a></li>
+					</ul>
+				</div><!--/.navbar-collapse-->
+			</div>
+		</div>
+		<!-- End navbar -->
+		<!-- Begin Page Content -->
+		<div class="container">
+			<!--Flash any messages-->
+			{% with messages = get_flashed_messages(with_categories=True) -%}
+			{% if messages -%}
+			{% for category, message in messages -%}
+			<div class="alert alert-dismissable alert-warning">
+				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+				<strong>Warning!</strong>This page is still under development and is subject to change. Come back soon!
+			</div>
+			<h1>Sam Redmond <small>A work in progress</small></h1>
+		</div>
+	</div>
+	<!-- Begin footer -->
+	<div id="footer">
+		<div class="container">
+			<p class="muted text-center">
+				Built by Sam Redmond. Structured on <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap v3.0.3</a>
+			</p>
+			<p class="muted text-center">
+				Code licensed under <a href="http://opensource.org/licenses/MIT" target="_blank">MIT License</a> - <a href="http://glyphicons.com">Glyphicons Free</a> licensed under <a href="http://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.
+			</p>
+		</div>
+	</div>
+	<!-- End footer -->
+	<!-- Scripts -->
+	<!-- Placed at the end of the document so the pages load faster-->
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="/static/js/bootstrap.min.js"></script>
+	<script src="/static/js/main.js"></script>
+</body>
+</html>
