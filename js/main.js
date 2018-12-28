@@ -79,7 +79,7 @@ $(document).ready(function() {
         'transport_type': 'beacon',
       });
       // Update the page_path of the configuration details to point to a virtual page.
-      gtag('config', 'UA-54146031-3', {'page_path': '/virtual/' + url});
+      gtag('config', 'UA-54146031-3', {'page_path': '/virtual/' + href});
     }
     // We changed the active tab and have a history object
     if (!currentlyActive && window.history && window.history.pushState) {
